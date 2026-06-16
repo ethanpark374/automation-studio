@@ -5,7 +5,7 @@ JINI의 AI 콘텐츠 자동화 포트폴리오 & 문의 랜딩 페이지.
 실제 화면/결과물/데모로 보여주고, 카카오톡 오픈채팅으로 문의를 받는다.
 
 - 단일 정적 페이지 (`index.html`, 외부 빌드 없음)
-- 문의: https://open.kakao.com/o/gteHxsri
+- 문의: https://open.kakao.com/o/sgbwOQzi
 - 배포: GitHub Pages 또는 Vercel (정적 호스팅 그대로)
 
 ## 로컬 미리보기
