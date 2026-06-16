@@ -75,9 +75,13 @@
   .tag{font-size:12px;color:var(--bone-dim);border:1px solid var(--ink-mid);border-radius:999px;padding:5px 11px}
 
   /* demo */
-  .demo-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:34px;align-items:center;margin-top:46px}
-  .demo-video{border:2px solid var(--accent);border-radius:14px;overflow:hidden;background:#000;box-shadow:0 24px 70px rgba(0,0,0,.5)}
+  .demo-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:46px}
+  .demo-card{display:flex;flex-direction:column}
+  .demo-video{border:2px solid var(--accent);border-radius:14px;overflow:hidden;background:#000;box-shadow:0 24px 70px rgba(0,0,0,.45)}
   .demo-video video{width:100%;display:block}
+  .demo-cap{margin-top:16px}
+  .demo-cap strong{display:block;font-size:16px;font-weight:800;letter-spacing:-.5px}
+  .demo-cap span{display:block;color:var(--bone-dim);font-size:13px;margin-top:5px;letter-spacing:-.3px}
   .steps{list-style:none}
   .steps li{display:flex;gap:14px;align-items:baseline;padding:11px 0;border-bottom:1px solid var(--ink-mid)}
   .steps li:last-child{border-bottom:0}
@@ -197,20 +201,26 @@
   <div class="wrap">
     <span class="sec-tag">LIVE DEMO</span>
     <h2 class="sec-title">실제로, 이렇게 돌아갑니다</h2>
-    <p class="sec-desc">숏폼 생성 파이프라인이 단계별로 도는 실제 데모입니다. (소리 없음)</p>
+    <p class="sec-desc">숏폼·롱폼 생성 파이프라인이 단계별로 도는 실제 데모입니다. (소리 없음)</p>
     <div class="demo-grid">
-      <div class="demo-video">
-        <video src="assets/demo.mp4" poster="assets/demo_poster.jpg" autoplay muted loop playsinline controls></video>
+      <div class="demo-card">
+        <div class="demo-video">
+          <video src="assets/demo.mp4" poster="assets/demo_poster.jpg" autoplay muted loop playsinline controls></video>
+        </div>
+        <div class="demo-cap">
+          <strong>숏폼 · SHORTS STUDIO</strong>
+          <span>소스 수집 → 라이선스 검증 → 대본 → 자산 처리 → 렌더 → 썸네일 → 메타</span>
+        </div>
       </div>
-      <ul class="steps">
-        <li><span class="n">01</span><span><span class="t">소스 수집</span><span class="d">공개 라이선스 소스 검색</span></span></li>
-        <li><span class="n">02</span><span><span class="t">라이선스 검증</span><span class="d">CC 유효성 확인</span></span></li>
-        <li><span class="n">03</span><span><span class="t">대본 생성</span><span class="d">LLM 한국어 스크립트</span></span></li>
-        <li><span class="n">04</span><span><span class="t">자산 처리</span><span class="d">영상·이미지 처리</span></span></li>
-        <li><span class="n">05</span><span><span class="t">렌더링</span><span class="d">FFmpeg 합성</span></span></li>
-        <li><span class="n">06</span><span><span class="t">썸네일 생성</span><span class="d">3종 생성·선정</span></span></li>
-        <li><span class="n">07</span><span><span class="t">메타데이터</span><span class="d">제목·설명·태그</span></span></li>
-      </ul>
+      <div class="demo-card">
+        <div class="demo-video">
+          <video src="assets/autocast_demo.mp4" poster="assets/autocast_poster.jpg" muted loop playsinline controls preload="metadata"></video>
+        </div>
+        <div class="demo-cap">
+          <strong>롱폼 · AUTOCAST</strong>
+          <span>렌더 → 마스터(loudnorm·그레이딩) → 검증 → 업로드 키트 · 9분 24초 완성본</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
